@@ -94,8 +94,8 @@ const Register: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setLoading(true);
     if (handleValidate()) {
+      setLoading(true);
       fetchApi();
     }
   };

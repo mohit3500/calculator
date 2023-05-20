@@ -85,9 +85,9 @@ const Login: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    setLoading(true);
     e.preventDefault();
     if (handleValidate()) {
+      setLoading(true);
       fetchApi();
     }
   };
