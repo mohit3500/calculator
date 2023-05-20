@@ -115,7 +115,7 @@ const Calculator: React.FC<PropComponent> = ({ name }) => {
   const fetchApi = async (): Promise<void> => {
     try {
       await axios.post(
-        'http://localhost:3500/api/calculator/calculation',
+        'https://mern-calculator-api.onrender.com/api/calculator/calculation',
         values
       );
     } catch (error) {

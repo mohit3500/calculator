@@ -34,7 +34,7 @@ const Table: React.FC = () => {
   const fetchApi = async (): Promise<void> => {
     try {
       const { data } = await axios.post<Cal[]>(
-        'http://localhost:3500/api/calculator/calculation/get',
+        'https://mern-calculator-api.onrender.com/api/calculator/calculation/get',
         value
       );
       setCalculations(data);
@@ -51,7 +51,7 @@ const Table: React.FC = () => {
     const id = e.currentTarget.id;
     try {
       const { data } = await axios.delete<Res>(
-        `http://localhost:3500/api/calculator/calculation/delete/${id}`
+        `https://mern-calculator-api.onrender.com/api/calculator/calculation/delete/${id}`
       );
 
       toast.success(data.msg, toastOptions);

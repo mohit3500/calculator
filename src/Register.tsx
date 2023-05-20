@@ -75,7 +75,7 @@ const Register: React.FC = () => {
   const fetchApi = async () => {
     try {
       const { data } = await axios.post<PostUserData>(
-        'http://localhost:3500/api/register',
+        'https://mern-calculator-api.onrender.com/api/register',
         values
       );
       localStorage.setItem('user', JSON.stringify(data.user));

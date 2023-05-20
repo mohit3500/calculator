@@ -67,7 +67,7 @@ const Login: React.FC = () => {
   const fetchApi = async () => {
     try {
       const { data } = await axios.post<PostUserData>(
-        'http://localhost:3500/api/login',
+        'https://mern-calculator-api.onrender.com/api/login',
         values
       );
       localStorage.setItem('user', JSON.stringify(data.user));
