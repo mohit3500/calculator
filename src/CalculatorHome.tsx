@@ -39,6 +39,15 @@ const CalculatorHome: React.FC<PropComponent> = ({ name, setName }) => {
     }
   }, [cal]);
 
+  const tokenJSON = localStorage.getItem('token');
+  const token = tokenJSON ? JSON.parse(tokenJSON) : '';
+
+  useEffect(() => {
+    if (!token) {
+      navigate('/login');
+    }
+  });
+
   return (
     <div className="h-screen w-screen bg-slate-100 flex flex-col items-center">
       <ToastContainer />

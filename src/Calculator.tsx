@@ -106,6 +106,9 @@ const Calculator: React.FC<PropComponent> = ({ name }) => {
   const userJSON = localStorage.getItem('user');
   const userId = userJSON ? JSON.parse(userJSON)._id : '';
 
+  const tokenJSON = localStorage.getItem('token');
+  const token = tokenJSON ? JSON.parse(tokenJSON) : '';
+
   const values = {
     name,
     userId,
@@ -132,6 +135,12 @@ const Calculator: React.FC<PropComponent> = ({ name }) => {
       navigate('/');
     }
   }, [name]);
+
+  useEffect(() => {
+    if (!token) {
+      navigate('/login');
+    }
+  });
 
   return (
     <>
