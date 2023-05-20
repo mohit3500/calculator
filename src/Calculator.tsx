@@ -144,7 +144,7 @@ const Calculator: React.FC<PropComponent> = ({ name }) => {
 
   return (
     <>
-      <div className="h-screen w-screen flex bg-slate-100 overflow-x-hidden  ">
+      <div className=" w-screen flex bg-slate-100 overflow-x-hidden md:flex-row flex-col pt-10 md:pt-0">
         <div className="flex flex-col w-[350px] m-auto p-[20px] rounded-[20px] pt-5 h-[430px]  backdrop-blur-md shadow-lg bg-white ">
           <div className=" rounded-[4px] p-[10px] mb-[10px] flex justify-end items-end text-[30px] font-semibold h-[115px]">
             {previousValue} {operator} {displayValue.substring(0, 14)}
